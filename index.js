@@ -32,7 +32,6 @@ function addTask() {
 
 function addCategory() {
   const newCategory = getNewCategoryText();
-  // continue the code here
   alert(`New category was added: ${newCategory}`);
 }
 
