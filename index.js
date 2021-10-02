@@ -22,10 +22,13 @@ renderTasks(tasks, "tasks-list");
 function taskChecked(taskId, checked) {
   // implement the delete task.
   // You are given the task id
-  return tasks.find((element) => element.id === checked);
+  //tasks.find((element) => element.taskId === done);
+  task = tasks.map((taskId) => {
+    taskId === done;
+  });
+  renderCategories(categories, CATEGORY_FILTER);
 
   renderTasks(tasks, "tasks-list");
-
   console.log(`${checked ? "" : "UN"}CHECKED TASK`, taskId);
 }
 
@@ -35,8 +38,8 @@ function addTask() {
   // continue the code here
   const taskadd = {
     id: counter + 1,
-    title: "Game of thrones",
-    category: "Movies",
+    title: taskTitle,
+    category: selectedCategory,
     done: false,
   };
   tasks.push(taskadd);
@@ -59,8 +62,8 @@ function filterTasks() {
   const selectedCategory = getSelectedCategoryById(CATEGORY_FILTER);
   const done = getFilteredDone();
   // continue the code here
-  //return category.filter((element) =>
-  //element.
+  tasks = tasks.filter((element) => element.category === selectedCategory);
+  renderCategories(categories, CATEGORY_SELECTOR);
   renderCategories(categories, CATEGORY_FILTER);
   // REMOVE ME: sample alert
   alert(`Category: ${selectedCategory} | done: ${done}`);
