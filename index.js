@@ -23,6 +23,7 @@ function taskChecked(taskId, checked) {
   // implement the delete task.
   // You are given the task id
   //tasks.find((element) => element.taskId === done);
+
   task = tasks.map((taskId) => {
     taskId === done;
   });
@@ -63,7 +64,7 @@ function filterTasks() {
   const done = getFilteredDone();
   // continue the code here
   tasks = tasks.filter((element) => element.category === selectedCategory);
-  renderCategories(categories, CATEGORY_SELECTOR);
+
   renderCategories(categories, CATEGORY_FILTER);
   // REMOVE ME: sample alert
   alert(`Category: ${selectedCategory} | done: ${done}`);
